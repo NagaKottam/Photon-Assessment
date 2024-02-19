@@ -10,6 +10,7 @@ import junit.framework.TestCase.assertNull
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.setMain
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -24,6 +25,7 @@ class NewYorkSchoolViewModelTest {
     private val repository : NewYorkSchoolRepository = mockk()
     private lateinit var viewModel: NewYorkSchoolViewModel
 
+    @Before
     fun setUp() {
         Dispatchers.setMain(testDispatcher)
         viewModel = NewYorkSchoolViewModel()
